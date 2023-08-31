@@ -8,18 +8,16 @@ import {
   Icon,
   Text,
   Stack,
-  HStack,
-  VStack,
 } from '@chakra-ui/react'
-import { SiAdobe, SiLoom, SiZapier, SiTailwindcss } from 'react-icons/si'
+import { SiAdobe, SiLoom, SiZapier, SiTailwindcss,SiEbay } from 'react-icons/si'
 
 
 interface FeatureProps {
   icon: ReactElement
-  title: string
+
 }
 // Replace test data with your own
-const Feature = ({ icon, title }: FeatureProps) => {
+const Feature = ({icon}: FeatureProps) => {
   return (
     <Stack>
       <Flex
@@ -29,11 +27,10 @@ const Feature = ({ icon, title }: FeatureProps) => {
         justify={'center'}
         color={'black'}
         rounded={'full'}
-        textColor={'black'}
         mb={1}>
         {icon}
-
       </Flex>
+      
     </Stack>
   )
 }
@@ -49,23 +46,25 @@ export default function Features() {
       </Stack>
 
       <Container maxW={'6xl'} mt={10}>
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 5 }} spacing={10}>
           <Feature
             icon={<Icon as={SiAdobe} w={10} h={10} />}
-            title={'Adobe'}
-
           />
           <Feature
             icon={<Icon as={SiLoom} w={10} h={10} />}
-            title={'Loom'}
+
           />
           <Feature
             icon={<Icon as={SiZapier} w={10} h={10} />}
-            title={'Zapier'}
+
           />
           <Feature
             icon={<Icon as={SiTailwindcss} w={10} h={10} />}
-            title={'tailwindcss'}
+
+          />
+           <Feature
+            icon={<Icon as={SiEbay} w={10} h={10} />}
+
           />
         </SimpleGrid>
       </Container>
